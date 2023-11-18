@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 62.5%;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+}
+
+* {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body * {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+    max-width: 100vw;
+    max-height: 100vh;
+    height: calc(100vh - 20px);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.grid {
+    padding: 10px;
+    background-color: rgb(180, 180, 180);
+    max-width: 525px;
+    max-height: 525px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.grid div {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.grid div[data="1"] {
+    color: red
+}
+
+.grid div[data="2"] {
+    color: blue
+}
+
+.grid div[data="3"] {
+    color: green
+}
+
+.grid div[data="4"] {
+    color: yellow
+}
+
+.grid div[data="5"] {
+    color: #ff6600
+}
+.grid div[data="6"] {
+    color: rgb(136, 100, 0)
+}
+.grid div[data="7"] {
+    color: rgb(29, 0, 136)
+}
+.grid div[data="8"] {
+    color: rgb(131, 0, 136)
+}
+
+
+
+.grid .gameOver, .grid .bomb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.6rem;
+    /* background-color: rgb(255, 60, 0); */
+}
+
+.grid .checked {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.6rem;
+    font-weight: bold;
+    background-color: rgb(199, 165, 238);
+}
+
+.grid .valid.flag{
+    font-size: 2.6rem;
+}
+
+.flags-wrapper, .flags {
+    font-size: 2.6rem;
+    color: #e5e5e5;
+}
+
+.flags {
+    font-weight: bold;
+}
+
+footer span {
+    font-size: 1.6rem;
+    font-family: "JetBrains Mono", monospace;
+}
